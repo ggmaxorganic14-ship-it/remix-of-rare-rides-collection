@@ -4,7 +4,6 @@ import { supabase } from "@/integrations/supabase/client";
 import { Layout } from "@/components/Layout";
 import { CarCard } from "@/components/CarCard";
 import { Button } from "@/components/ui/button";
-import heroBg from "@/assets/hero-bg.jpg";
 
 const Index = () => {
   const { data: featuredCars } = useQuery({
@@ -23,12 +22,7 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="relative flex min-h-[80vh] items-center justify-center overflow-hidden">
-        <img
-          src={heroBg}
-          alt=""
-          className="absolute inset-0 h-full w-full object-cover"
-        />
+      <section className="relative flex min-h-[80vh] items-center justify-center overflow-hidden bg-gradient-to-br from-background via-card to-background">
         <div className="absolute inset-0 bg-background/70" />
         <div className="relative z-10 container text-center">
           <h1 className="animate-fade-in font-display text-5xl tracking-wider text-foreground md:text-7xl">
