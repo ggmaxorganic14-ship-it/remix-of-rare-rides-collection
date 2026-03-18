@@ -1,0 +1,14 @@
+import { Header } from "./Header";
+import { Footer } from "./Footer";
+import { WhatsAppButton } from "./WhatsAppButton";
+
+export function Layout({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="flex min-h-screen flex-col">
+      <Header />
+      <main className="flex-1 pt-16">{children}</main>
+      <Footer />
+      <WhatsAppButton />
+    </div>
+  );
+}
